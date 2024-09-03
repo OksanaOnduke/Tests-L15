@@ -15,11 +15,9 @@ public class TopUpBalanceTest extends BaseTest {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         try {
-            // Пытаемся найти и нажать кнопку принятия cookies, если она существует
             WebElement cookiesButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Принять']")));
             cookiesButton.click();
         } catch (Exception e) {
-            // Если кнопка не найдена, можно записать лог или просто игнорировать
             System.out.println("Всплывающее окно cookies не найдено или уже закрыто.");
         }
 
